@@ -4,7 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { composeWithDevTools } from "redux-devtools-extension";
 import { BooksList } from './booksList';
-import CreateBook from '../components/createBook';
+import CreateBook from '../../components/createBook';
 import { bindActionCreators } from 'redux';
 // import * as Actions from '../actions';
 import { Redirect } from 'react-router-dom'

@@ -10,7 +10,7 @@ class Navigation extends React.Component {
 
         return (
             <ul>
-                <li><NavLink to='/Home'>Home</NavLink></li>
+                <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/Page1'>Page 1</NavLink></li>
                 <li><NavLink to='/Page2'>Page 2</NavLink></li>
                 { auth.uid ? <SignOut /> :     

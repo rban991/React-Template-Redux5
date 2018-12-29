@@ -3,34 +3,52 @@ import React, { Component } from 'react';
 import '../styles/App.scss';
 // import { simpleAction } from '../actions/simpleAction'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from './home';
-import PageNotFound from './pageNotFound';
-import Page1 from './page1';
-import Page2 from './page2';
-import Navigation from './navigation';
-import SignIn from './auth/signIn';
-import SignUp from './auth/signUp';
+import Home from './web/home';
+import PageNotFound from './web/pageNotFound';
+import Page1 from './web/page1';
+import Page2 from './web/page2';
+import Navigation from './web/navigation';
+import SignIn from './web/auth/signIn';
+import SignUp from './web/auth/signUp';
+import Mobi_Home from './mobi/home';
+import Media from 'react-media';
 
 class App extends Component {
   render() {
-
-    return (
-
-      <BrowserRouter>
-        <div>
-          <Navigation />
-          <Switch>
-            <Route exact path='/Home' component={Home} />
-            <Route exact path='/Page1' component={Page1} />
-            <Route exact path='/Page2' component={Page2} />
-            <Route exact path='/Sign-In' component={SignIn} />
-            <Route exact path='/Sign-Up' component={SignUp} />
-            <Route component={PageNotFound} />
-          </Switch>
-        </div>
-      </BrowserRouter>
+    return (   
+          <Media query={{ minWidth: 480 }}>
+          {matches =>
+            matches ?
+      
+          (
+            // desktop version is rendered
+            <BrowserRouter>
+              <div>
+                <Navigation />
+                <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route exact path='/Page1' component={Page1} />
+                  <Route exact path='/Page2' component={Page2} />
+                  <Route exact path='/Sign-In' component={SignIn} />
+                  <Route exact path='/Sign-Up' component={SignUp} />
+                  <Route component={PageNotFound} />
+                </Switch>
+              </div>
+            </BrowserRouter>
+          ) : (
+              // mobile version is rendered 
+              <BrowserRouter>
+                <div>
+                  <Switch>
+                    <Route component={Mobi_Home} />
+                  </Switch>
+                </div>
+              </BrowserRouter>
+            )
+        }
+      </Media>
     );
   }
 }
 
-export default App;
+    export default App;

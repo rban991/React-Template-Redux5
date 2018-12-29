@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { signUpUser } from '../../actions/authActions';
+import { signUpUser } from '../../../actions/authActions';
 import { bindActionCreators } from 'redux';
 
 class SignUp extends React.Component {

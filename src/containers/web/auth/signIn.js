@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signInUser } from '../../actions/authActions';
+import { signInUser } from '../../../actions/authActions';
 import { bindActionCreators } from 'redux';
 import { Redirect } from 'react-router-dom'
 

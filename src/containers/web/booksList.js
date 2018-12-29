@@ -1,5 +1,5 @@
 import React from 'react';
-import BookSummary from '../components/bookSummary'
+import BookSummary from '../../components/bookSummary'
 
 export const BooksList = ({books}) => {
     return (
