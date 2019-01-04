@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Page1 extends React.Component {
+class WorldMarkets extends React.Component {
     render() {
         return (
             <div>
-                <p>Page 1</p>
+                <p>World Markets</p>
             </div>
         );
     }
 };
 
-export default Page1;
+export default WorldMarkets;

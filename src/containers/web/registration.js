@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Page2 extends React.Component {
+class Registration extends React.Component {
     render() {
         return (
             <div>
-                <p>Page 2</p>
+                <p>Registration</p>
             </div>
         );
     }
 };
 
-export default Page2;
+export default Registration;

@@ -25,13 +25,13 @@ class SignIn extends React.Component {
     render() {
         // console.log(this.props);
         const { authError, auth } = this.props;
-        if (auth.uid) return <Redirect to='/Home' />
+        if (auth.uid) return <Redirect to='/Dashboard' />
 
         return (
             <div>
                 <form onSubmit={this.handleSubmit} >
-                    <input type='email' id='email' placeHolder='Email' onChange={this.handleChange}></input>
-                    <input type='password' id='password' placeHolder='Password' onChange={this.handleChange}></input>
+                    <input type='email' id='email' placeholder='Email' onChange={this.handleChange}></input>
+                    <input type='password' id='password' placeholder='Password' onChange={this.handleChange}></input>
                     <button type='submit'>Sign In</button>
                 </form>
                 <div>

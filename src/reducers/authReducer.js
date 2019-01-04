@@ -1,5 +1,6 @@
 const initState = {
     authError: null,
+    forgottenPasswordError: null,
 };
 
 const authReducer = (state = initState, action) => {
@@ -32,6 +33,18 @@ const authReducer = (state = initState, action) => {
             return {
                 ...state,
                 authError: action.err.message
+            }
+        case 'FORGOTTEN_PASSWORD_SENT':
+            console.log('FORGOTTEN_PASSWORD_SENT');
+            return {
+                ...state,
+                forgottenPasswordError: null
+            }
+        case 'FORGOTTEN_PASSWORD_FAILED':
+            console.log('FORGOTTEN_PASSWORD_FAILED');
+            return {
+                ...state,
+                forgottenPasswordError: action.err.message
             }
         default:
             return state;

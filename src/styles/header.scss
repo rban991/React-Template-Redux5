@@ -1,0 +1,71 @@
+@import "/brandColors";
+
+.HeaderBar{
+    background: $brand-green;
+    width: 100%;
+    height: 129px;
+    color: $brand-white;
+    border-bottom: 1px solid;
+  }
+  
+  
+    .VSLogo {
+       margin-top: 16px;
+       margin-left: 10px;
+       min-width: 60px;
+       max-height: 79.391px;
+    }
+
+    .StylesSocialLinks{
+        background: $brand-green;
+        float: right;
+        display: inline-block;
+        margin-top: -12px;
+    }
+    
+    .VSTwitter {
+        float: right;
+        background: $brand-green;
+        width: 25px;
+        margin-right: 0.9em;
+        overflow: hidden;
+    
+    }
+
+    .postLogin {
+        float: right;
+        top: 0;
+        right: 0;
+        margin-top: 5px;
+        margin-right: 0.2em;
+        max-width: 465px;
+    }
+
+    .preLogin {
+        float: right;
+        top: 0;
+        right: 0;
+        margin-top: 5px;
+        margin-right: 0.2em;
+        max-width: 465px;
+        min-width: 465px;
+    }
+     /*
+    .StocksWhatsAppChat{
+        float: right;
+        background: #001919;
+        width: 80px;
+        margin-right: 0.6em;
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+   
+NEED TO HANDLE THE TWITTER LOGO WHEN THE SCREEN COLAPSES 
+
+      @media only screen and (max-width: 550px) {
+        .StylesSocialLinks {
+            display: block;
+        }
+    }
+   
+    */

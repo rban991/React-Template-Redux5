@@ -4,14 +4,18 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { composeWithDevTools } from "redux-devtools-extension";
 import { bindActionCreators } from 'redux';
-// import * as Actions from '../actions';
 import { Redirect } from 'react-router-dom'
 
 class Home extends React.Component {
     render() {
+       const { auth } = this.props;﻿
+       if (!auth.uid) return <Redirect to='/Sign-In' />
+
         return (
             <div>
-                <p>Dashboard</p>
+                <p>Homepage</p>
+              <BooksList books={this.props.books} />
+                <CreateBook />
             </div>
         );
     }
@@ -25,8 +29,12 @@ function mapStateToProps(state) {
     };
 }
 
-// export default connect(mapStateToProps)(Home);
-
+// Much simpler way of hooking up my actions 
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators({
+        addBook
+    }, dispatch)
+})
 
 export default compose(
     connect(mapStateToProps),
@@ -34,7 +42,3 @@ export default compose(
         { collection: 'books' }
     ])
 )(Home)
-
-
-
-// import { composeWithDevTools } from "redux-devtools-extension";
